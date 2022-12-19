@@ -10,10 +10,9 @@ import excel
 
 RUN_Version = "1.1v"
 main.SAVE_FILE = '.'
-main.DEBUG["NOT_DOWN_IMG"] = True
-main.DEBUG["NOT_DOWN_HOME"] = True
 main.DEBUG["RUNNING_TIME"] = 1
 main.DEFAULT["MIN_LIST_IMG"] = 3
+main.cookies = {}
 
 while True:
     # nowtime = datetime.datetime.now().strftime('%H:%M:%S')
