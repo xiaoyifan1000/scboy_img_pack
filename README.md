@@ -30,6 +30,45 @@ main.cookies = {}  # cookies
 <h5>cookie 获取自行百度，获取后按字典形式填写</h5>
 <h4>配置好需要的设置后，运行run.py即可</h4>
 
+# 文件生成目录
+
+<pre>
+---img # 图片生成目录
+   ｜-thread-x00xxx.htm
+      ｜- 图片
+      ｜- 图片
+      ｜- 图片
+   ｜-scboy_href.xlsx
+---Temp # 飙车页面储存页面缓存
+   ｜
+   thread-x00xxx.htm
+---scboy_href_img.db  # 数据库
+---scboy.html  # 主页面
+---RUNNING.log  # 日志
+
+</pre>
+
+# 运行执行逻辑
+<pre>
+下载飙车页面
+储存db文件，
+将不在db文件中的页面地址进行下载进temp文件夹
+下载temp文件夹中新加入的帖子中所有图片进img文件夹
+更新scboy_href.xlsx文件
+run = main.Run()  # 调用主文件，建db环境
+run.first_run()  # 初始化
+run.down_scboy_biaoche()  # 下载飙车页面
+run.save_img_html()  # 缓存所有图片
+ex = excel.EXCEL()  # 生成excel记录文件
+ex.write_in()  # 写入
+</pre>
+
+
+
+
+
+   
+  
 
 
 
